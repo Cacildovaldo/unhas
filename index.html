@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Alongamento de Unhas - Designer de Unhas Profissional</title>
+    <style>
+        /* Reset e estilos gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #fff5f7;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #ff6b8b, #ff8e9e);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .slogan {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 0;
+            gap: 30px;
+        }
+        
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .hero-text h1 {
+            font-size: 36px;
+            color: #d23369;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        
+        .hero-text p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        .hero-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(210, 51, 105, 0.2);
+        }
+        
+        /* Botão CTA */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #d23369, #ff6b8b);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(210, 51, 105, 0.4);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(210, 51, 105, 0.5);
+        }
+        
+        /* Seção de Benefícios */
+        .benefits {
+            background-color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .benefits h2 {
+            font-size: 32px;
+            color: #d23369;
+            margin-bottom: 40px;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .benefit-card {
+            background-color: #fff9fb;
+            border-radius: 10px;
+            padding: 30px 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .benefit-icon {
+            font-size: 40px;
+            color: #ff6b8b;
+            margin-bottom: 20px;
+        }
+        
+        .benefit-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #d23369;
+        }
+        
+        /* Seção de Depoimentos */
+        .testimonials {
+            padding: 60px 0;
+            background-color: #fff5f7;
+        }
+        
+        .testimonials h2 {
+            text-align: center;
+            font-size: 32px;
+            color: #d23369;
+            margin-bottom: 40px;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        
+        .testimonial-card:before {
+            content: '"';
+            font-size: 80px;
+            color: #ffccd5;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            line-height: 1;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #d23369;
+        }
+        
+        /* Seção do Curso */
+        .course-info {
+            padding: 60px 0;
+            background-color: white;
+        }
+        
+        .course-info h2 {
+            text-align: center;
+            font-size: 32px;
+            color: #d23369;
+            margin-bottom: 40px;
+        }
+        
+        .course-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .module {
+            margin-bottom: 30px;
+            border-left: 4px solid #ff6b8b;
+            padding-left: 20px;
+        }
+        
+        .module h3 {
+            font-size: 24px;
+            color: #d23369;
+            margin-bottom: 10px;
+        }
+        
+        .module ul {
+            list-style-position: inside;
+        }
+        
+        .module li {
+            margin-bottom: 8px;
+        }
+        
+        /* Seção de Preço */
+        .pricing {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #ffccd5, #ff6b8b);
+            color: white;
+            text-align: center;
+        }
+        
+        .pricing h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        
+        .price {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        
+        .price-small {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        .guarantee {
+            font-size: 18px;
+            margin: 30px auto;
+            max-width: 600px;
+            background-color: rgba(255,255,255,0.2);
+            padding: 15px;
+            border-radius: 10px;
+        }
+        
+        /* Seção do Vídeo */
+        .video-section {
+            padding: 60px 0;
+            background-color: white;
+            text-align: center;
+        }
+        
+        .video-section h2 {
+            font-size: 32px;
+            color: #d23369;
+            margin-bottom: 30px;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 14px;
+        }
+        
+        .footer-links {
+            margin: 20px 0;
+        }
+        
+        .footer-links a {
+            color: #ff6b8b;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 28px;
+            }
+            
+            .hero-text p {
+                font-size: 16px;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Designer de Unhas Profissional</div>
+            <div class="slogan">Transforme sua paixão por unhas em uma carreira de sucesso!</div>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <div class="hero-text">
+                <h1>Domine a Arte do Alongamento de Unhas e Seja uma Profissional Reconhecida!</h1>
+                <p>Aprenda as técnicas mais modernas de alongamento de unhas com nosso curso completo. De iniciante a profissional em poucas semanas!</p>
+                <p>Você vai dominar desde os básicos até as técnicas mais avançadas, podendo cobrar até 5x mais por cada serviço.</p>
+                <center><a href="https://pay.hotmart.com/E89189818K" class="cta-button">QUERO ME INSCREVER AGORA</a></center>
+            </div>
+            <div class="hero-image">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgd8sEmuNg4jaxS1i2WbTxF36DjS-Oy9fXdqPYSKR1dlzlTCyhL6nq9D2lsVoimlOYK9ONWe9Z_0VX5pb9AoAveoUN0G-YhHvGZgSf7snu21o0duOvBYmpD58ulDOQ7nVLnHhAexUWXPX_QqBXUf7MbW0FRTQ2gLl9NoZio7lvKmZd7iVKi-vRKJwmCRz8/s750/professional_course.jpg" alt="Unhas decoradas profissionalmente">
+            </div>
+        </div>
+    </section>
+    
+    <section class="benefits">
+        <div class="container">
+            <h2>O que você vai aprender no curso?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">💅</div>
+                    <h3>Técnicas Profissionais</h3>
+                    <p>Domine alongamento em gel, fibra de vidro, acrigel e muito mais com métodos testados e aprovados.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎨</div>
+                    <h3>Designs Incríveis</h3>
+                    <p>Aprenda a criar designs exclusivos que vão impressionar suas clientes e aumentar seu faturamento.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Gestão Financeira</h3>
+                    <p>Saiba como precificar seus serviços, controlar custos e maximizar seus lucros.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📱</div>
+                    <h3>Marketing Digital</h3>
+                    <p>Aprenda a divulgar seu trabalho nas redes sociais e atrair mais clientes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="testimonials">
+        <div class="container">
+            <h2>O que nossas alunas dizem</h2>
+            <div class="testimonial-card">
+                <p class="testimonial-text">Depois do curso, consegui triplicar minha clientela e hoje trabalho por conta própria, ganhando 3 vezes mais do que ganhava no salão. Valeu cada centavo investido!</p>
+                <p class="testimonial-author">- Ana Clara, São Paulo</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">As técnicas que aprendi me deram confiança para oferecer serviços mais sofisticados e cobrar o valor que realmente mereço. Recomendo demais!</p>
+                <p class="testimonial-author">- Juliana, Rio de Janeiro</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="course-info">
+        <div class="container">
+            <h2>Conteúdo Programático</h2>
+            <div class="course-content">
+                <div class="module">
+                    <h3>Módulo 1: Fundamentos</h3>
+                    <ul>
+                        <li>Anatomia da unha e cuidados essenciais</li>
+                        <li>Materiais e equipamentos necessários</li>
+                        <li>Preparação da unha natural</li>
+                        <li>Segurança e higiene no trabalho</li>
+                    </ul>
+                </div>
+                <div class="module">
+                    <h3>Módulo 2: Técnicas de Alongamento</h3>
+                    <ul>
+                        <li>Alongamento com gel: passo a passo completo</li>
+                        <li>Técnica de fibra de vidro</li>
+                        <li>Acrigel: vantagens e aplicação</li>
+                        <li>Manutenção e reparos</li>
+                    </ul>
+                </div>
+                <div class="module">
+                    <h3>Módulo 3: Design Profissional</h3>
+                    <ul>
+                        <li>Escultura e formato perfeitos</li>
+                        <li>Técnicas de pintura avançada</li>
+                        <li>Decorações 3D</li>
+                        <li>Tendências e inovações</li>
+                    </ul>
+                </div>
+                <div class="module">
+                    <h3>Módulo 4: Negócios</h3>
+                    <ul>
+                        <li>Como montar seu home studio</li>
+                        <li>Precificação de serviços</li>
+                        <li>Marketing digital para nail designers</li>
+                        <li>Atendimento ao cliente</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="video-section">
+        <div class="container">
+            <h2>Assista ao nosso vídeo de apresentação</h2>
+            <div class="video-container">
+                <iframe src="https://player.vimeo.com/video/894337516" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+    
+    <section class="pricing">
+        <div class="container">
+            <h2>Invista no seu futuro como Designer de Unhas</h2>
+            <p>De <s>R$297,00</s> por apenas</p>
+            <div class="price">R$97,00</div>
+            <p class="price-small">Ou 12x de R$9,74 no cartão</p>
+            <a href="https://pay.hotmart.com/E89189818K" class="cta-button">QUERO ME INSCREVER AGORA</a>
+            <div class="guarantee">
+                <p>✅ Garantia de 7 dias: Se não gostar do curso, devolvemos seu dinheiro sem burocracia!</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="logo">Designer de Unhas Profissional</div>
+            <div class="footer-links">
+                <a href="https://go.hotmart.com/E89189818K?dp=1">Termos de Uso</a>
+                <a href="https://go.hotmart.com/E89189818K">Política de Privacidade</a>
+                
+            </div>
+            <p>© 2025 Curso Alongamento de Unhas - Todos os direitos reservados</p>
+        </div>
+    </footer>
+</body>
+</html>
